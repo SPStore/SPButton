@@ -43,6 +43,9 @@
 - (void)initialize {
     _imageRatio = 0.5;
     _imagePosition = SPButtonImagePositionDefault;
+
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 - (void)setHighlighted:(BOOL)highlighted {}
@@ -53,34 +56,34 @@
     }
     switch (self.imagePosition) {
         case SPButtonImagePositionDefault:
-        case SPButtonImagePositionLeft: {
+        case SPButtonImagePositionLeft: { // 图片在左
             _imageRatio = _imageRatio == 0.0 ? 0.5 : _imageRatio;
-            CGFloat imageW =  contentRect.size.width * _imageRatio;
+            CGFloat imageW =  (contentRect.size.width-_imageTitleSpace) * _imageRatio;
             CGFloat imageH = contentRect.size.height;
-            return CGRectMake(0, 0, imageW, imageH);
+            return CGRectMake(self.contentEdgeInsets.left, self.contentEdgeInsets.top, imageW, imageH);
         }
             break;
         case SPButtonImagePositionTop: {
             _imageRatio = _imageRatio == 0.0 ? 2.0/3.0 : _imageRatio;
             CGFloat imageW = contentRect.size.width;
-            CGFloat imageH = contentRect.size.height * _imageRatio;
-            return CGRectMake(0, 0, imageW, imageH);
+            CGFloat imageH = (contentRect.size.height-_imageTitleSpace) * _imageRatio;
+            return CGRectMake(self.contentEdgeInsets.left, self.contentEdgeInsets.top, imageW, imageH);
         }
             break;
         case SPButtonImagePositionRight: {
             _imageRatio = _imageRatio == 0.0 ? 0.5 : _imageRatio;
-            CGFloat imageW =  contentRect.size.width * _imageRatio;
+            CGFloat imageW =  (contentRect.size.width-_imageTitleSpace) * _imageRatio;
             CGFloat imageH = contentRect.size.height;
             CGFloat imageX = contentRect.size.width - imageW;
-            return CGRectMake(imageX, 0, imageW, imageH);
+            return CGRectMake(imageX+self.contentEdgeInsets.left, self.contentEdgeInsets.top, imageW, imageH);
         }
             break;
         case SPButtonImagePositionBottom: {
             _imageRatio = _imageRatio == 0.0 ? 2.0/3.0 : _imageRatio;
             CGFloat imageW =  contentRect.size.width;
-            CGFloat imageH = contentRect.size.height * _imageRatio;
-            CGFloat imageY = contentRect.size.height - imageH;
-            return CGRectMake(0, imageY, imageW, imageH);
+            CGFloat imageH = (contentRect.size.height - _imageTitleSpace) * _imageRatio;
+            CGFloat imageY = contentRect.size.height-imageH;
+            return CGRectMake(self.contentEdgeInsets.left, imageY+self.contentEdgeInsets.top, imageW, imageH);
         }
             break;
         default:
@@ -97,32 +100,32 @@
         case SPButtonImagePositionDefault:
         case SPButtonImagePositionLeft: {
             _imageRatio = _imageRatio == 0.0 ? 0.5 : _imageRatio;
-            CGFloat titleX = contentRect.size.width * _imageRatio;
+            CGFloat titleX = (contentRect.size.width-_imageTitleSpace) * _imageRatio + _imageTitleSpace;
             CGFloat titleW = contentRect.size.width - titleX;
             CGFloat titleH = contentRect.size.height;
-            return CGRectMake(titleX, 0, titleW, titleH);
+            return CGRectMake(titleX+self.contentEdgeInsets.left, self.contentEdgeInsets.top, titleW, titleH);
         }
             break;
         case SPButtonImagePositionTop: {
             _imageRatio = _imageRatio == 0.0 ? 2.0/3.0 : _imageRatio;
-            CGFloat titleY = contentRect.size.height * _imageRatio;
+            CGFloat titleY = (contentRect.size.height-_imageTitleSpace) * _imageRatio + _imageTitleSpace;
             CGFloat titleW = contentRect.size.width;
             CGFloat titleH = contentRect.size.height - titleY;
-            return CGRectMake(0, titleY, titleW, titleH);
+            return CGRectMake(self.contentEdgeInsets.left, titleY+self.contentEdgeInsets.top, titleW, titleH);
         }
             break;
         case SPButtonImagePositionRight: {
             _imageRatio = _imageRatio == 0.0 ? 0.5 : _imageRatio;
-            CGFloat titleW = contentRect.size.width * (1-_imageRatio);
+            CGFloat titleW = (contentRect.size.width - _imageTitleSpace) * (1-_imageRatio);
             CGFloat titleH = contentRect.size.height;
-            return CGRectMake(0, 0, titleW, titleH);
+            return CGRectMake(self.contentEdgeInsets.left, self.contentEdgeInsets.top, titleW, titleH);
         }
             break;
         case SPButtonImagePositionBottom: {
             _imageRatio = _imageRatio == 0.0 ? 2.0/3.0 : _imageRatio;
             CGFloat titleW = contentRect.size.width;
-            CGFloat titleH = contentRect.size.height * (1 - _imageRatio);
-            return CGRectMake(0, 0, titleW, titleH);
+            CGFloat titleH = (contentRect.size.height-_imageTitleSpace) * (1 - _imageRatio);
+            return CGRectMake(self.contentEdgeInsets.left, self.contentEdgeInsets.top, titleW, titleH);
         }
             break;
         default:
@@ -134,29 +137,6 @@
 
 - (void)setImagePosition:(SPButtonImagePosition)imagePosition {
     _imagePosition = imagePosition;
-    switch (imagePosition) {
-        case SPButtonImagePositionDefault:
-        case SPButtonImagePositionLeft:
-            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-            self.titleLabel.textAlignment = NSTextAlignmentCenter;
-            break;
-        case SPButtonImagePositionTop:
-            
-            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-            self.titleLabel.textAlignment = NSTextAlignmentCenter;
-            
-            break;
-        case SPButtonImagePositionRight:
-            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-            self.titleLabel.textAlignment = NSTextAlignmentCenter;
-            break;
-        case SPButtonImagePositionBottom:
-            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-            self.titleLabel.textAlignment = NSTextAlignmentCenter;
-            break;
-        default:
-            break;
-    }
     [self setNeedsDisplay];
 }
 
@@ -165,6 +145,14 @@
     [self setNeedsDisplay];
 }
 
+- (void)setImageTitleSpace:(CGFloat)imageTitleSpace {
+    _imageTitleSpace = imageTitleSpace;
+    [self setNeedsDisplay];
+}
 
+- (void)setContentEdgeInsets:(UIEdgeInsets)contentEdgeInsets {
+    [super setContentEdgeInsets:contentEdgeInsets];
+    [self setNeedsDisplay];
+}
 
 @end

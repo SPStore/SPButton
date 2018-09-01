@@ -24,6 +24,11 @@ typedef NS_ENUM(NSInteger, SPButtonImagePosition) {
 // 图片的高度所占按钮的高度比例,注意要浮点数，如果传分数比如三分之二，要写2.0/3.0，不能写2/3
 @property (nonatomic, assign) CGFloat imageRatio;
 
+// 图片的位置
 @property (nonatomic, assign) SPButtonImagePosition imagePosition;
+
+// 图片与标题之间的间距
+@property (nonatomic, assign) CGFloat imageTitleSpace;
+
 
 @end
