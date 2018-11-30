@@ -342,9 +342,6 @@
     
     CGFloat buttonWidth = contentRect.size.width + self.contentEdgeInsets.left + self.contentEdgeInsets.right;
     CGFloat buttonHeight = contentRect.size.height + self.contentEdgeInsets.top + self.contentEdgeInsets.bottom;
-    
-    // 本方法参数里的imageRect是系统计算的结果，下面这行代码是接收自己计算的结果，也就是说图片在上，文字在下这种情况，titleLabel的位置依赖于自己计算的图片的大小
-    CGSize imageSize = [self imageRectImageAtTopForContentRect:contentRect imageRect:imageRect titleRect:titleRect].size;
 
     titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
     // titleLabel的安全宽度，这里一定要改变宽度值，因为当外界设置了titleEdgeInsets值时，系统计算出来的所有值都是在”左图右文“的基础上进行的，这个基础上可能会导致titleLabel的宽度被压缩，所以我们在此自己重新计算
@@ -356,7 +353,6 @@
     // 水平方向
     switch (self.contentHorizontalAlignment) {
         case UIControlContentHorizontalAlignmentCenter: {// 中心对齐
-
             titleOrigin.x = (titleSafeWidth - titleSize.width) / 2.0 + self.contentEdgeInsets.left + self.titleEdgeInsets.left;
         }
             break;

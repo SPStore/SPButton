@@ -245,6 +245,7 @@ static NSString * const setupInsetsCellID = @"setupInsetsCell";
             imageEdgeInsets.top = model.topValue;
             self.button.imageEdgeInsets = imageEdgeInsets;
         }
+            break;
         case SPInsetsTypeTitle: {
             UIEdgeInsets titleEdgeInsets = self.button.titleEdgeInsets;
             titleEdgeInsets.top = model.topValue;
@@ -267,6 +268,7 @@ static NSString * const setupInsetsCellID = @"setupInsetsCell";
             imageEdgeInsets.left = model.leftValue;
             self.button.imageEdgeInsets = imageEdgeInsets;
         }
+            break;
         case SPInsetsTypeTitle: {
             UIEdgeInsets titleEdgeInsets = self.button.titleEdgeInsets;
             titleEdgeInsets.left = model.leftValue;
