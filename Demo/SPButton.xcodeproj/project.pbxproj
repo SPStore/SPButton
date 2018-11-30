@@ -7,71 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A8808822138CFEC00C3553F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8808812138CFEC00C3553F /* AppDelegate.m */; };
-		6A8808852138CFEC00C3553F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8808842138CFEC00C3553F /* ViewController.m */; };
-		6A8808882138CFEC00C3553F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A8808862138CFEC00C3553F /* Main.storyboard */; };
-		6A88088A2138CFED00C3553F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A8808892138CFED00C3553F /* Assets.xcassets */; };
-		6A88088D2138CFED00C3553F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A88088B2138CFED00C3553F /* LaunchScreen.storyboard */; };
-		6A8808902138CFED00C3553F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A88088F2138CFED00C3553F /* main.m */; };
-		6A88089A2138CFED00C3553F /* SPButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8808992138CFED00C3553F /* SPButtonTests.m */; };
-		6A8808A52138CFED00C3553F /* SPButtonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8808A42138CFED00C3553F /* SPButtonUITests.m */; };
-		6A8808B52138D13C00C3553F /* SPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8808B42138D13C00C3553F /* SPButton.m */; };
+		52623E3C21AFFA35001020D7 /* SPSliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52623E3A21AFFA35001020D7 /* SPSliderCell.m */; };
+		52623E3D21AFFA35001020D7 /* SPSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52623E3B21AFFA35001020D7 /* SPSliderCell.xib */; };
+		52F6F09721A39DFD00F92E31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6F09621A39DFD00F92E31 /* AppDelegate.m */; };
+		52F6F09A21A39DFD00F92E31 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6F09921A39DFD00F92E31 /* ViewController.m */; };
+		52F6F09D21A39DFE00F92E31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F6F09B21A39DFE00F92E31 /* Main.storyboard */; };
+		52F6F09F21A39E0000F92E31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52F6F09E21A39E0000F92E31 /* Assets.xcassets */; };
+		52F6F0A221A39E0000F92E31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F6F0A021A39E0000F92E31 /* LaunchScreen.storyboard */; };
+		52F6F0A521A39E0000F92E31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6F0A421A39E0000F92E31 /* main.m */; };
+		52F6F0AF21A39E0100F92E31 /* SPButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6F0AE21A39E0100F92E31 /* SPButtonTests.m */; };
+		52F6F0BA21A39E0100F92E31 /* SPButtonUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6F0B921A39E0100F92E31 /* SPButtonUITests.m */; };
+		52FD1C0921AE636600DEA153 /* SPTestViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD1C0821AE636600DEA153 /* SPTestViewViewController.m */; };
+		52FD1C0D21AE899800DEA153 /* SPAdjustAlignmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD1C0B21AE899800DEA153 /* SPAdjustAlignmentCell.m */; };
+		52FD1C0E21AE899800DEA153 /* SPAdjustAlignmentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD1C0C21AE899800DEA153 /* SPAdjustAlignmentCell.xib */; };
+		52FD1C1721AEA12100DEA153 /* SPSetupInsetsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD1C1521AEA12100DEA153 /* SPSetupInsetsCell.m */; };
+		52FD1C1821AEA12100DEA153 /* SPSetupInsetsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52FD1C1621AEA12100DEA153 /* SPSetupInsetsCell.xib */; };
+		52FD1C2121AFDC4800DEA153 /* SPInsetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FD1C2021AFDC4800DEA153 /* SPInsetsModel.m */; };
+		52FDE96821B0CC5C000FFEA6 /* SPAdjustAlignmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE96721B0CC5C000FFEA6 /* SPAdjustAlignmentModel.m */; };
+		52FDE96B21B0D15B000FFEA6 /* SPSliderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE96A21B0D15B000FFEA6 /* SPSliderModel.m */; };
+		52FDE96F21B0E4F4000FFEA6 /* SPButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 52FDE96E21B0E4F4000FFEA6 /* SPButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6A8808962138CFED00C3553F /* PBXContainerItemProxy */ = {
+		52F6F0AB21A39E0100F92E31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A8808752138CFEC00C3553F /* Project object */;
+			containerPortal = 52F6F08A21A39DFD00F92E31 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6A88087C2138CFEC00C3553F;
+			remoteGlobalIDString = 52F6F09121A39DFD00F92E31;
 			remoteInfo = SPButton;
 		};
-		6A8808A12138CFED00C3553F /* PBXContainerItemProxy */ = {
+		52F6F0B621A39E0100F92E31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 6A8808752138CFEC00C3553F /* Project object */;
+			containerPortal = 52F6F08A21A39DFD00F92E31 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6A88087C2138CFEC00C3553F;
+			remoteGlobalIDString = 52F6F09121A39DFD00F92E31;
 			remoteInfo = SPButton;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6A88087D2138CFEC00C3553F /* SPButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A8808802138CFEC00C3553F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6A8808812138CFEC00C3553F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6A8808832138CFEC00C3553F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6A8808842138CFEC00C3553F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6A8808872138CFEC00C3553F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6A8808892138CFED00C3553F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6A88088C2138CFED00C3553F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6A88088E2138CFED00C3553F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A88088F2138CFED00C3553F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6A8808952138CFED00C3553F /* SPButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A8808992138CFED00C3553F /* SPButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPButtonTests.m; sourceTree = "<group>"; };
-		6A88089B2138CFED00C3553F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A8808A02138CFED00C3553F /* SPButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A8808A42138CFED00C3553F /* SPButtonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPButtonUITests.m; sourceTree = "<group>"; };
-		6A8808A62138CFED00C3553F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A8808B32138D13C00C3553F /* SPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPButton.h; sourceTree = "<group>"; };
-		6A8808B42138D13C00C3553F /* SPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPButton.m; sourceTree = "<group>"; };
+		52623E3921AFFA35001020D7 /* SPSliderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSliderCell.h; sourceTree = "<group>"; };
+		52623E3A21AFFA35001020D7 /* SPSliderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSliderCell.m; sourceTree = "<group>"; };
+		52623E3B21AFFA35001020D7 /* SPSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSliderCell.xib; sourceTree = "<group>"; };
+		52F6F09221A39DFD00F92E31 /* SPButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F6F09521A39DFD00F92E31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		52F6F09621A39DFD00F92E31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		52F6F09821A39DFD00F92E31 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		52F6F09921A39DFD00F92E31 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		52F6F09C21A39DFE00F92E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52F6F09E21A39E0000F92E31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52F6F0A121A39E0000F92E31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52F6F0A321A39E0000F92E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F6F0A421A39E0000F92E31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52F6F0AA21A39E0100F92E31 /* SPButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F6F0AE21A39E0100F92E31 /* SPButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPButtonTests.m; sourceTree = "<group>"; };
+		52F6F0B021A39E0100F92E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52F6F0B521A39E0100F92E31 /* SPButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		52F6F0B921A39E0100F92E31 /* SPButtonUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPButtonUITests.m; sourceTree = "<group>"; };
+		52F6F0BB21A39E0100F92E31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52FD1C0721AE636600DEA153 /* SPTestViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPTestViewViewController.h; sourceTree = "<group>"; };
+		52FD1C0821AE636600DEA153 /* SPTestViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPTestViewViewController.m; sourceTree = "<group>"; };
+		52FD1C0A21AE899800DEA153 /* SPAdjustAlignmentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAdjustAlignmentCell.h; sourceTree = "<group>"; };
+		52FD1C0B21AE899800DEA153 /* SPAdjustAlignmentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAdjustAlignmentCell.m; sourceTree = "<group>"; };
+		52FD1C0C21AE899800DEA153 /* SPAdjustAlignmentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPAdjustAlignmentCell.xib; sourceTree = "<group>"; };
+		52FD1C1421AEA12100DEA153 /* SPSetupInsetsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSetupInsetsCell.h; sourceTree = "<group>"; };
+		52FD1C1521AEA12100DEA153 /* SPSetupInsetsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSetupInsetsCell.m; sourceTree = "<group>"; };
+		52FD1C1621AEA12100DEA153 /* SPSetupInsetsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SPSetupInsetsCell.xib; sourceTree = "<group>"; };
+		52FD1C1F21AFDC4800DEA153 /* SPInsetsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPInsetsModel.h; sourceTree = "<group>"; };
+		52FD1C2021AFDC4800DEA153 /* SPInsetsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPInsetsModel.m; sourceTree = "<group>"; };
+		52FDE96621B0CC5C000FFEA6 /* SPAdjustAlignmentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAdjustAlignmentModel.h; sourceTree = "<group>"; };
+		52FDE96721B0CC5C000FFEA6 /* SPAdjustAlignmentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAdjustAlignmentModel.m; sourceTree = "<group>"; };
+		52FDE96921B0D15B000FFEA6 /* SPSliderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPSliderModel.h; sourceTree = "<group>"; };
+		52FDE96A21B0D15B000FFEA6 /* SPSliderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPSliderModel.m; sourceTree = "<group>"; };
+		52FDE96D21B0E4F4000FFEA6 /* SPButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPButton.h; sourceTree = "<group>"; };
+		52FDE96E21B0E4F4000FFEA6 /* SPButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6A88087A2138CFEC00C3553F /* Frameworks */ = {
+		52F6F08F21A39DFD00F92E31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A8808922138CFED00C3553F /* Frameworks */ = {
+		52F6F0A721A39E0100F92E31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A88089D2138CFED00C3553F /* Frameworks */ = {
+		52F6F0B221A39E0100F92E31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,66 +108,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6A8808742138CFEC00C3553F = {
+		52F6F08921A39DFD00F92E31 = {
 			isa = PBXGroup;
 			children = (
-				6A88087F2138CFEC00C3553F /* SPButton */,
-				6A8808982138CFED00C3553F /* SPButtonTests */,
-				6A8808A32138CFED00C3553F /* SPButtonUITests */,
-				6A88087E2138CFEC00C3553F /* Products */,
+				52F6F09421A39DFD00F92E31 /* SPButton */,
+				52F6F0AD21A39E0100F92E31 /* SPButtonTests */,
+				52F6F0B821A39E0100F92E31 /* SPButtonUITests */,
+				52F6F09321A39DFD00F92E31 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		6A88087E2138CFEC00C3553F /* Products */ = {
+		52F6F09321A39DFD00F92E31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6A88087D2138CFEC00C3553F /* SPButton.app */,
-				6A8808952138CFED00C3553F /* SPButtonTests.xctest */,
-				6A8808A02138CFED00C3553F /* SPButtonUITests.xctest */,
+				52F6F09221A39DFD00F92E31 /* SPButton.app */,
+				52F6F0AA21A39E0100F92E31 /* SPButtonTests.xctest */,
+				52F6F0B521A39E0100F92E31 /* SPButtonUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6A88087F2138CFEC00C3553F /* SPButton */ = {
+		52F6F09421A39DFD00F92E31 /* SPButton */ = {
 			isa = PBXGroup;
 			children = (
-				6A8808B22138D13C00C3553F /* SPButton */,
-				6A8808802138CFEC00C3553F /* AppDelegate.h */,
-				6A8808812138CFEC00C3553F /* AppDelegate.m */,
-				6A8808832138CFEC00C3553F /* ViewController.h */,
-				6A8808842138CFEC00C3553F /* ViewController.m */,
-				6A8808862138CFEC00C3553F /* Main.storyboard */,
-				6A8808892138CFED00C3553F /* Assets.xcassets */,
-				6A88088B2138CFED00C3553F /* LaunchScreen.storyboard */,
-				6A88088E2138CFED00C3553F /* Info.plist */,
-				6A88088F2138CFED00C3553F /* main.m */,
+				52FDE96C21B0E4F4000FFEA6 /* SPButton */,
+				52F6F09821A39DFD00F92E31 /* ViewController.h */,
+				52F6F09921A39DFD00F92E31 /* ViewController.m */,
+				52FD1C0721AE636600DEA153 /* SPTestViewViewController.h */,
+				52FD1C0821AE636600DEA153 /* SPTestViewViewController.m */,
+				52FD1C1C21AFDBC700DEA153 /* Cells */,
+				52FD1C1E21AFDC1900DEA153 /* Models */,
+				52F6F09521A39DFD00F92E31 /* AppDelegate.h */,
+				52F6F09621A39DFD00F92E31 /* AppDelegate.m */,
+				52F6F09B21A39DFE00F92E31 /* Main.storyboard */,
+				52F6F09E21A39E0000F92E31 /* Assets.xcassets */,
+				52F6F0A021A39E0000F92E31 /* LaunchScreen.storyboard */,
+				52F6F0A321A39E0000F92E31 /* Info.plist */,
+				52F6F0A421A39E0000F92E31 /* main.m */,
 			);
 			path = SPButton;
 			sourceTree = "<group>";
 		};
-		6A8808982138CFED00C3553F /* SPButtonTests */ = {
+		52F6F0AD21A39E0100F92E31 /* SPButtonTests */ = {
 			isa = PBXGroup;
 			children = (
-				6A8808992138CFED00C3553F /* SPButtonTests.m */,
-				6A88089B2138CFED00C3553F /* Info.plist */,
+				52F6F0AE21A39E0100F92E31 /* SPButtonTests.m */,
+				52F6F0B021A39E0100F92E31 /* Info.plist */,
 			);
 			path = SPButtonTests;
 			sourceTree = "<group>";
 		};
-		6A8808A32138CFED00C3553F /* SPButtonUITests */ = {
+		52F6F0B821A39E0100F92E31 /* SPButtonUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6A8808A42138CFED00C3553F /* SPButtonUITests.m */,
-				6A8808A62138CFED00C3553F /* Info.plist */,
+				52F6F0B921A39E0100F92E31 /* SPButtonUITests.m */,
+				52F6F0BB21A39E0100F92E31 /* Info.plist */,
 			);
 			path = SPButtonUITests;
 			sourceTree = "<group>";
 		};
-		6A8808B22138D13C00C3553F /* SPButton */ = {
+		52FD1C1C21AFDBC700DEA153 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6A8808B32138D13C00C3553F /* SPButton.h */,
-				6A8808B42138D13C00C3553F /* SPButton.m */,
+				52FD1C0A21AE899800DEA153 /* SPAdjustAlignmentCell.h */,
+				52FD1C0B21AE899800DEA153 /* SPAdjustAlignmentCell.m */,
+				52FD1C0C21AE899800DEA153 /* SPAdjustAlignmentCell.xib */,
+				52623E3921AFFA35001020D7 /* SPSliderCell.h */,
+				52623E3A21AFFA35001020D7 /* SPSliderCell.m */,
+				52623E3B21AFFA35001020D7 /* SPSliderCell.xib */,
+				52FD1C1421AEA12100DEA153 /* SPSetupInsetsCell.h */,
+				52FD1C1521AEA12100DEA153 /* SPSetupInsetsCell.m */,
+				52FD1C1621AEA12100DEA153 /* SPSetupInsetsCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		52FD1C1E21AFDC1900DEA153 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52FDE96621B0CC5C000FFEA6 /* SPAdjustAlignmentModel.h */,
+				52FDE96721B0CC5C000FFEA6 /* SPAdjustAlignmentModel.m */,
+				52FDE96921B0D15B000FFEA6 /* SPSliderModel.h */,
+				52FDE96A21B0D15B000FFEA6 /* SPSliderModel.m */,
+				52FD1C1F21AFDC4800DEA153 /* SPInsetsModel.h */,
+				52FD1C2021AFDC4800DEA153 /* SPInsetsModel.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52FDE96C21B0E4F4000FFEA6 /* SPButton */ = {
+			isa = PBXGroup;
+			children = (
+				52FDE96D21B0E4F4000FFEA6 /* SPButton.h */,
+				52FDE96E21B0E4F4000FFEA6 /* SPButton.m */,
 			);
 			path = SPButton;
 			sourceTree = "<group>";
@@ -148,13 +208,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6A88087C2138CFEC00C3553F /* SPButton */ = {
+		52F6F09121A39DFD00F92E31 /* SPButton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A8808A92138CFED00C3553F /* Build configuration list for PBXNativeTarget "SPButton" */;
+			buildConfigurationList = 52F6F0BE21A39E0100F92E31 /* Build configuration list for PBXNativeTarget "SPButton" */;
 			buildPhases = (
-				6A8808792138CFEC00C3553F /* Sources */,
-				6A88087A2138CFEC00C3553F /* Frameworks */,
-				6A88087B2138CFEC00C3553F /* Resources */,
+				52F6F08E21A39DFD00F92E31 /* Sources */,
+				52F6F08F21A39DFD00F92E31 /* Frameworks */,
+				52F6F09021A39DFD00F92E31 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -162,68 +222,68 @@
 			);
 			name = SPButton;
 			productName = SPButton;
-			productReference = 6A88087D2138CFEC00C3553F /* SPButton.app */;
+			productReference = 52F6F09221A39DFD00F92E31 /* SPButton.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6A8808942138CFED00C3553F /* SPButtonTests */ = {
+		52F6F0A921A39E0100F92E31 /* SPButtonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A8808AC2138CFED00C3553F /* Build configuration list for PBXNativeTarget "SPButtonTests" */;
+			buildConfigurationList = 52F6F0C121A39E0100F92E31 /* Build configuration list for PBXNativeTarget "SPButtonTests" */;
 			buildPhases = (
-				6A8808912138CFED00C3553F /* Sources */,
-				6A8808922138CFED00C3553F /* Frameworks */,
-				6A8808932138CFED00C3553F /* Resources */,
+				52F6F0A621A39E0100F92E31 /* Sources */,
+				52F6F0A721A39E0100F92E31 /* Frameworks */,
+				52F6F0A821A39E0100F92E31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6A8808972138CFED00C3553F /* PBXTargetDependency */,
+				52F6F0AC21A39E0100F92E31 /* PBXTargetDependency */,
 			);
 			name = SPButtonTests;
 			productName = SPButtonTests;
-			productReference = 6A8808952138CFED00C3553F /* SPButtonTests.xctest */;
+			productReference = 52F6F0AA21A39E0100F92E31 /* SPButtonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		6A88089F2138CFED00C3553F /* SPButtonUITests */ = {
+		52F6F0B421A39E0100F92E31 /* SPButtonUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6A8808AF2138CFED00C3553F /* Build configuration list for PBXNativeTarget "SPButtonUITests" */;
+			buildConfigurationList = 52F6F0C421A39E0100F92E31 /* Build configuration list for PBXNativeTarget "SPButtonUITests" */;
 			buildPhases = (
-				6A88089C2138CFED00C3553F /* Sources */,
-				6A88089D2138CFED00C3553F /* Frameworks */,
-				6A88089E2138CFED00C3553F /* Resources */,
+				52F6F0B121A39E0100F92E31 /* Sources */,
+				52F6F0B221A39E0100F92E31 /* Frameworks */,
+				52F6F0B321A39E0100F92E31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6A8808A22138CFED00C3553F /* PBXTargetDependency */,
+				52F6F0B721A39E0100F92E31 /* PBXTargetDependency */,
 			);
 			name = SPButtonUITests;
 			productName = SPButtonUITests;
-			productReference = 6A8808A02138CFED00C3553F /* SPButtonUITests.xctest */;
+			productReference = 52F6F0B521A39E0100F92E31 /* SPButtonUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6A8808752138CFEC00C3553F /* Project object */ = {
+		52F6F08A21A39DFD00F92E31 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = Cookie;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "乐升平";
 				TargetAttributes = {
-					6A88087C2138CFEC00C3553F = {
-						CreatedOnToolsVersion = 9.4.1;
+					52F6F09121A39DFD00F92E31 = {
+						CreatedOnToolsVersion = 10.0;
 					};
-					6A8808942138CFED00C3553F = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 6A88087C2138CFEC00C3553F;
+					52F6F0A921A39E0100F92E31 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 52F6F09121A39DFD00F92E31;
 					};
-					6A88089F2138CFED00C3553F = {
-						CreatedOnToolsVersion = 9.4.1;
-						TestTargetID = 6A88087C2138CFEC00C3553F;
+					52F6F0B421A39E0100F92E31 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 52F6F09121A39DFD00F92E31;
 					};
 				};
 			};
-			buildConfigurationList = 6A8808782138CFEC00C3553F /* Build configuration list for PBXProject "SPButton" */;
+			buildConfigurationList = 52F6F08D21A39DFD00F92E31 /* Build configuration list for PBXProject "SPButton" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -231,37 +291,40 @@
 				en,
 				Base,
 			);
-			mainGroup = 6A8808742138CFEC00C3553F;
-			productRefGroup = 6A88087E2138CFEC00C3553F /* Products */;
+			mainGroup = 52F6F08921A39DFD00F92E31;
+			productRefGroup = 52F6F09321A39DFD00F92E31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6A88087C2138CFEC00C3553F /* SPButton */,
-				6A8808942138CFED00C3553F /* SPButtonTests */,
-				6A88089F2138CFED00C3553F /* SPButtonUITests */,
+				52F6F09121A39DFD00F92E31 /* SPButton */,
+				52F6F0A921A39E0100F92E31 /* SPButtonTests */,
+				52F6F0B421A39E0100F92E31 /* SPButtonUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6A88087B2138CFEC00C3553F /* Resources */ = {
+		52F6F09021A39DFD00F92E31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A88088D2138CFED00C3553F /* LaunchScreen.storyboard in Resources */,
-				6A88088A2138CFED00C3553F /* Assets.xcassets in Resources */,
-				6A8808882138CFEC00C3553F /* Main.storyboard in Resources */,
+				52FD1C0E21AE899800DEA153 /* SPAdjustAlignmentCell.xib in Resources */,
+				52623E3D21AFFA35001020D7 /* SPSliderCell.xib in Resources */,
+				52F6F0A221A39E0000F92E31 /* LaunchScreen.storyboard in Resources */,
+				52FD1C1821AEA12100DEA153 /* SPSetupInsetsCell.xib in Resources */,
+				52F6F09F21A39E0000F92E31 /* Assets.xcassets in Resources */,
+				52F6F09D21A39DFE00F92E31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A8808932138CFED00C3553F /* Resources */ = {
+		52F6F0A821A39E0100F92E31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A88089E2138CFED00C3553F /* Resources */ = {
+		52F6F0B321A39E0100F92E31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,61 +334,68 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6A8808792138CFEC00C3553F /* Sources */ = {
+		52F6F08E21A39DFD00F92E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A8808B52138D13C00C3553F /* SPButton.m in Sources */,
-				6A8808852138CFEC00C3553F /* ViewController.m in Sources */,
-				6A8808902138CFED00C3553F /* main.m in Sources */,
-				6A8808822138CFEC00C3553F /* AppDelegate.m in Sources */,
+				52FD1C1721AEA12100DEA153 /* SPSetupInsetsCell.m in Sources */,
+				52F6F09A21A39DFD00F92E31 /* ViewController.m in Sources */,
+				52FDE96B21B0D15B000FFEA6 /* SPSliderModel.m in Sources */,
+				52FDE96F21B0E4F4000FFEA6 /* SPButton.m in Sources */,
+				52FD1C0D21AE899800DEA153 /* SPAdjustAlignmentCell.m in Sources */,
+				52FD1C2121AFDC4800DEA153 /* SPInsetsModel.m in Sources */,
+				52FDE96821B0CC5C000FFEA6 /* SPAdjustAlignmentModel.m in Sources */,
+				52F6F0A521A39E0000F92E31 /* main.m in Sources */,
+				52FD1C0921AE636600DEA153 /* SPTestViewViewController.m in Sources */,
+				52623E3C21AFFA35001020D7 /* SPSliderCell.m in Sources */,
+				52F6F09721A39DFD00F92E31 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A8808912138CFED00C3553F /* Sources */ = {
+		52F6F0A621A39E0100F92E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A88089A2138CFED00C3553F /* SPButtonTests.m in Sources */,
+				52F6F0AF21A39E0100F92E31 /* SPButtonTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A88089C2138CFED00C3553F /* Sources */ = {
+		52F6F0B121A39E0100F92E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A8808A52138CFED00C3553F /* SPButtonUITests.m in Sources */,
+				52F6F0BA21A39E0100F92E31 /* SPButtonUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6A8808972138CFED00C3553F /* PBXTargetDependency */ = {
+		52F6F0AC21A39E0100F92E31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A88087C2138CFEC00C3553F /* SPButton */;
-			targetProxy = 6A8808962138CFED00C3553F /* PBXContainerItemProxy */;
+			target = 52F6F09121A39DFD00F92E31 /* SPButton */;
+			targetProxy = 52F6F0AB21A39E0100F92E31 /* PBXContainerItemProxy */;
 		};
-		6A8808A22138CFED00C3553F /* PBXTargetDependency */ = {
+		52F6F0B721A39E0100F92E31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6A88087C2138CFEC00C3553F /* SPButton */;
-			targetProxy = 6A8808A12138CFED00C3553F /* PBXContainerItemProxy */;
+			target = 52F6F09121A39DFD00F92E31 /* SPButton */;
+			targetProxy = 52F6F0B621A39E0100F92E31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6A8808862138CFEC00C3553F /* Main.storyboard */ = {
+		52F6F09B21A39DFE00F92E31 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6A8808872138CFEC00C3553F /* Base */,
+				52F6F09C21A39DFE00F92E31 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6A88088B2138CFED00C3553F /* LaunchScreen.storyboard */ = {
+		52F6F0A021A39E0000F92E31 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6A88088C2138CFED00C3553F /* Base */,
+				52F6F0A121A39E0000F92E31 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -333,7 +403,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6A8808A72138CFED00C3553F /* Debug */ = {
+		52F6F0BC21A39E0100F92E31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,13 +455,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		6A8808A82138CFED00C3553F /* Release */ = {
+		52F6F0BD21A39E0100F92E31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -438,113 +509,110 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		6A8808AA2138CFED00C3553F /* Debug */ = {
+		52F6F0BF21A39E0100F92E31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N7GTHGMGVY;
+				DEVELOPMENT_TEAM = MP8K63J94Y;
 				INFOPLIST_FILE = SPButton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idresschina.SPButton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idress.SPButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6A8808AB2138CFED00C3553F /* Release */ = {
+		52F6F0C021A39E0100F92E31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N7GTHGMGVY;
+				DEVELOPMENT_TEAM = MP8K63J94Y;
 				INFOPLIST_FILE = SPButton/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idresschina.SPButton;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idress.SPButton;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		6A8808AD2138CFED00C3553F /* Debug */ = {
+		52F6F0C221A39E0100F92E31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MP8K63J94Y;
 				INFOPLIST_FILE = SPButtonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idresschina.SPButtonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idress.SPButtonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SPButton.app/SPButton";
 			};
 			name = Debug;
 		};
-		6A8808AE2138CFED00C3553F /* Release */ = {
+		52F6F0C321A39E0100F92E31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MP8K63J94Y;
 				INFOPLIST_FILE = SPButtonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idresschina.SPButtonTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idress.SPButtonTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SPButton.app/SPButton";
 			};
 			name = Release;
 		};
-		6A8808B02138CFED00C3553F /* Debug */ = {
+		52F6F0C521A39E0100F92E31 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MP8K63J94Y;
 				INFOPLIST_FILE = SPButtonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idresschina.SPButtonUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idress.SPButtonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SPButton;
 			};
 			name = Debug;
 		};
-		6A8808B12138CFED00C3553F /* Release */ = {
+		52F6F0C621A39E0100F92E31 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MP8K63J94Y;
 				INFOPLIST_FILE = SPButtonUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.idresschina.SPButtonUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.idress.SPButtonUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SPButton;
@@ -554,43 +622,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6A8808782138CFEC00C3553F /* Build configuration list for PBXProject "SPButton" */ = {
+		52F6F08D21A39DFD00F92E31 /* Build configuration list for PBXProject "SPButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A8808A72138CFED00C3553F /* Debug */,
-				6A8808A82138CFED00C3553F /* Release */,
+				52F6F0BC21A39E0100F92E31 /* Debug */,
+				52F6F0BD21A39E0100F92E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A8808A92138CFED00C3553F /* Build configuration list for PBXNativeTarget "SPButton" */ = {
+		52F6F0BE21A39E0100F92E31 /* Build configuration list for PBXNativeTarget "SPButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A8808AA2138CFED00C3553F /* Debug */,
-				6A8808AB2138CFED00C3553F /* Release */,
+				52F6F0BF21A39E0100F92E31 /* Debug */,
+				52F6F0C021A39E0100F92E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A8808AC2138CFED00C3553F /* Build configuration list for PBXNativeTarget "SPButtonTests" */ = {
+		52F6F0C121A39E0100F92E31 /* Build configuration list for PBXNativeTarget "SPButtonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A8808AD2138CFED00C3553F /* Debug */,
-				6A8808AE2138CFED00C3553F /* Release */,
+				52F6F0C221A39E0100F92E31 /* Debug */,
+				52F6F0C321A39E0100F92E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6A8808AF2138CFED00C3553F /* Build configuration list for PBXNativeTarget "SPButtonUITests" */ = {
+		52F6F0C421A39E0100F92E31 /* Build configuration list for PBXNativeTarget "SPButtonUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6A8808B02138CFED00C3553F /* Debug */,
-				6A8808B12138CFED00C3553F /* Release */,
+				52F6F0C521A39E0100F92E31 /* Debug */,
+				52F6F0C621A39E0100F92E31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6A8808752138CFEC00C3553F /* Project object */;
+	rootObject = 52F6F08A21A39DFD00F92E31 /* Project object */;
 }

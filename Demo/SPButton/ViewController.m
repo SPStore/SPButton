@@ -2,15 +2,17 @@
 //  ViewController.m
 //  SPButton
 //
-//  Created by develop1 on 2018/8/31.
-//  Copyright © 2018年 Cookie. All rights reserved.
+//  Created by 乐升平 on 2018/11/20.
+//  Copyright © 2018 乐升平. All rights reserved.
 //
 
 #import "ViewController.h"
-#import "SPButton.h"
+#import "SPTestViewViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController () <UITableViewDataSource,UITableViewDelegate>
+@property (nonatomic, strong) UIButton *button;
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *dataSource;
 @end
 
 @implementation ViewController
@@ -18,72 +20,62 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"按钮图片的位置";
 
-    SPButton *button1 = [[SPButton alloc] initWithImageRatio:0.5];
-    button1.frame = CGRectMake(50, 140, 100, 30);
-    [button1 setTitle:@"狗狗" forState:UIControlStateNormal];
-    [button1 setImage:[UIImage imageNamed:@"dog"] forState:UIControlStateNormal];
-    [button1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button1.backgroundColor = [UIColor redColor];
-    button1.titleLabel.font = [UIFont systemFontOfSize:14];
-    button1.titleLabel.backgroundColor = [UIColor greenColor];
-    button1.imageView.backgroundColor = [UIColor yellowColor];
-    button1.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-    button1.imageTitleSpace = 5;
-    [self.view addSubview:button1];
+    self.dataSource = @[
+                          @{@"name":@"图片在左",
+                            @"position":@(SPButtonImagePositionLeft)
+                            },
+                          @{@"name":@"图片在右",
+                            @"position":@(SPButtonImagePositionRight)
+                            },
+                          @{@"name":@"图片在上",
+                            @"position":@(SPButtonImagePositionTop)
+                            },
+                          @{@"name":@"图片在下",
+                            @"position":@(SPButtonImagePositionBottom)
+                            },
+                        ];
 
-    SPButton *button2 = [[SPButton alloc] initWithImageRatio:0.5];
-    button2.frame = CGRectMake(200, 120, 60, 90);
-    [button2 setTitle:@"狗狗" forState:UIControlStateNormal];
-    [button2 setImage:[UIImage imageNamed:@"dog"] forState:UIControlStateNormal];
-    [button2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button2.backgroundColor = [UIColor redColor];
-    button2.titleLabel.font = [UIFont systemFontOfSize:14];
-    button2.titleLabel.backgroundColor = [UIColor greenColor];
-    button2.imageView.backgroundColor = [UIColor yellowColor];
-    button2.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-    button2.imagePosition = SPButtonImagePositionTop;
-    button2.imageTitleSpace = 5;
-    [self.view addSubview:button2];
-
-    SPButton *button3 = [[SPButton alloc] initWithImageRatio:0.5];
-    button3.frame = CGRectMake(50, 260, 60, 90);
-    [button3 setTitle:@"狗狗" forState:UIControlStateNormal];
-    [button3 setImage:[UIImage imageNamed:@"dog"] forState:UIControlStateNormal];
-    [button3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button3.backgroundColor = [UIColor redColor];
-    button3.titleLabel.font = [UIFont systemFontOfSize:14];
-    button3.titleLabel.backgroundColor = [UIColor greenColor];
-    button3.imageView.backgroundColor = [UIColor yellowColor];
-    button3.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
-    button3.imagePosition = SPButtonImagePositionBottom;
-    button3.imageTitleSpace = 5;
-    [self.view addSubview:button3];
-
-    SPButton *button4 = [[SPButton alloc] initWithImageRatio:0.5];
-    button4.frame = CGRectMake(180, 290, 100, 30);
-    [button4 setTitle:@"狗狗" forState:UIControlStateNormal];
-    [button4 setImage:[UIImage imageNamed:@"dog"] forState:UIControlStateNormal];
-    [button4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button4.backgroundColor = [UIColor redColor];
-    button4.titleLabel.font = [UIFont systemFontOfSize:14];
-    button4.titleLabel.backgroundColor = [UIColor greenColor];
-    button4.imageView.backgroundColor = [UIColor yellowColor];
-    button4.contentEdgeInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-    button4.imagePosition = SPButtonImagePositionRight;
-    button4.imageTitleSpace = 5;
-    [self.view addSubview:button4];
-
+    [self.view addSubview:self.tableView];
 
 }
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataSource.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellID = @"myCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    NSDictionary *dic = self.dataSource[indexPath.row];
+    cell.textLabel.text = dic[@"name"];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SPTestViewViewController *testVc = [[SPTestViewViewController alloc] init];
+    NSDictionary *dic = self.dataSource[indexPath.row];
+    testVc.imagePosition = [dic[@"position"] integerValue];
+    [self.navigationController pushViewController:testVc animated:YES];
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+    }
+    return _tableView;
+}
 
 @end

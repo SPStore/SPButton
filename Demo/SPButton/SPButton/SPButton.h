@@ -2,33 +2,37 @@
 //  SPButton.h
 //  SPButton
 //
-//  Created by leshengping on 16/10/28.
-//  Copyright © 2016年 leshengping. All rights reserved.
+//  Created by 乐升平 on 2018/11/20.
+//  Copyright © 2018 乐升平. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 typedef NS_ENUM(NSInteger, SPButtonImagePosition) {
-    SPButtonImagePositionDefault,   // 默认在左边
-    SPButtonImagePositionLeft,      // 图片在左边
-    SPButtonImagePositionTop,       // 图片在上面
-    SPButtonImagePositionRight,     // 图片在右边
-    SPButtonImagePositionBottom     // 图片在下面
+    SPButtonImagePositionLeft   = 0,     // 图片在文字左侧
+    SPButtonImagePositionRight  = 1,     // 图片在文字右侧
+    SPButtonImagePositionTop    = 2,     // 图片在文字上侧
+    SPButtonImagePositionBottom = 3      // 图片在文字下侧
 };
 
+IB_DESIGNABLE
 @interface SPButton : UIButton
 
-- (instancetype)initWithImageRatio:(CGFloat)ratio;
+- (instancetype)initWithImagePosition:(SPButtonImagePosition)imagePosition;
 
-// 图片的高度所占按钮的高度比例,注意要浮点数，如果传分数比如三分之二，要写2.0/3.0，不能写2/3
-@property (nonatomic, assign) CGFloat imageRatio;
-
-// 图片的位置
-@property (nonatomic, assign) SPButtonImagePosition imagePosition;
-
-// 图片与标题之间的间距
-@property (nonatomic, assign) CGFloat imageTitleSpace;
+#if TARGET_INTERFACE_BUILDER // storyBoard/xib中设置
+@property (nonatomic) IBInspectable NSInteger imagePosition; // 图片位置
+@property (nonatomic, assign) IBInspectable CGFloat space; // 图片和文字之间的间距，这里名字和纯代码的名字不一样，因为imageTitleSpace这个名字在storyBoard/xib中过长，显示不全
+#else // 纯代码设置
+@property (nonatomic) SPButtonImagePosition imagePosition; // 图片位置
+@property (nonatomic, assign) CGFloat imageTitleSpace; // 图片和文字之间的间距
+#endif
 
 
 @end
+
+
+NS_ASSUME_NONNULL_END
