@@ -24,8 +24,8 @@ IB_DESIGNABLE
 - (instancetype)initWithImagePosition:(SPButtonImagePosition)imagePosition;
 
 #if TARGET_INTERFACE_BUILDER // storyBoard/xib中设置
-@property (nonatomic) IBInspectable NSInteger imagePosition; // 图片位置
-@property (nonatomic, assign) IBInspectable CGFloat space; // 图片和文字之间的间距，这里名字和纯代码的名字不一样，因为imageTitleSpace这个名字在storyBoard/xib中过长，显示不全
+@property (nonatomic,assign) IBInspectable NSInteger imagePosition; // 图片位置
+@property (nonatomic, assign) IBInspectable CGFloat imageTitleSpace; // 图片和文字之间的间距
 #else // 纯代码设置
 @property (nonatomic) SPButtonImagePosition imagePosition; // 图片位置
 @property (nonatomic, assign) CGFloat imageTitleSpace; // 图片和文字之间的间距
