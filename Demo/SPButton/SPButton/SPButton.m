@@ -19,21 +19,16 @@
 
 #pragma mark - system methods
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        
         [self initialize];
-        
     }
     return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        
         [self initialize];
-        
     }
     return self;
 }
@@ -193,23 +188,23 @@
 
 - (CGRect)imageRectImageAtRightForContentRect:(CGRect)contentRect imageRect:(CGRect)imageRect titleRect:(CGRect)titleRect {
     
+    CGFloat imageSafeWidth = contentRect.size.width - self.imageEdgeInsets.left - self.imageEdgeInsets.right;
+    if (imageRect.size.width >= imageSafeWidth) {
+        return imageRect;
+    }
+    
     CGPoint imageOrigin = imageRect.origin;
     CGSize imageSize = imageRect.size;
     CGSize titleSize = titleRect.size;
-    
-    titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
-    
-    CGFloat buttonWidth = contentRect.size.width + self.contentEdgeInsets.left + self.contentEdgeInsets.right;
-    
-    CGFloat imageSafeWidth = contentRect.size.width - self.imageEdgeInsets.left - self.imageEdgeInsets.right;
+
     // 这里水平中心对齐，跟图片在右边时的中心对齐时差别在于：图片在右边时中心对齐考虑了titleLabel+imageView这个整体，而这里只单独考虑imageView
     if (imageSize.width + titleSize.width > imageSafeWidth) {
         imageSize.width = imageSize.width - (imageSize.width + titleSize.width - imageSafeWidth);
-        if (imageSize.width < 0) {
-            imageSize.width = 0;
-        }
     }
     
+    CGFloat buttonWidth = contentRect.size.width + self.contentEdgeInsets.left + self.contentEdgeInsets.right;
+    titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
+
     switch (self.contentHorizontalAlignment) {
         case UIControlContentHorizontalAlignmentCenter: // 中心对齐
             // (contentRect.size.width - self.imageEdgeInsets.left - self.imageEdgeInsets.right - (imageSize.width + titleSize.width))/2.0+titleSize.width指的是imageView在其有效区域内联合titleLabel整体居中时的x值，有效区域指的是contentRect内缩imageEdgeInsets后的区域
@@ -259,9 +254,6 @@
             titleOrigin.x = buttonWidth - (titleSize.width + self.currentImage.size.width) - self.titleEdgeInsets.right - self.contentEdgeInsets.right - _imageTitleSpace * 0.5;
             break;
     }
-//    if (titleSize.height > contentRect.size.height - self.titleEdgeInsets.top - self.titleEdgeInsets.bottom) {
-//        titleSize.height = contentRect.size.height - self.titleEdgeInsets.top - self.titleEdgeInsets.bottom;
-//    }
     titleRect.size = titleSize;
     titleRect.origin = titleOrigin;
     return titleRect;
@@ -273,18 +265,17 @@
     CGPoint imageOrigin = imageRect.origin;
     CGSize imageSize = imageRect.size;
     CGSize titleSize = titleRect.size;
-    
-    // 之所以采用自己计算的结果，是因为当sizeToFit且titleLabel的numberOfLines > 0时，系统内部会按照2行计算
-    titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
-    
-    CGFloat buttonWidth = contentRect.size.width + self.contentEdgeInsets.left + self.contentEdgeInsets.right;
-    CGFloat buttonHeight = contentRect.size.height + self.contentEdgeInsets.top + self.contentEdgeInsets.bottom;
-    
+
     CGFloat imageSafeWidth = contentRect.size.width - self.imageEdgeInsets.left - self.imageEdgeInsets.right;
+
     // 这里水平中心对齐，跟图片在右边时的中心对齐时差别在于：图片在右边时中心对齐考虑了titleLabel+imageView这个整体，而这里只单独考虑imageView
     if (imageSize.width > imageSafeWidth) {
         imageSize.width = imageSafeWidth;
     }
+    
+    CGFloat buttonWidth = contentRect.size.width + self.contentEdgeInsets.left + self.contentEdgeInsets.right;
+    CGFloat buttonHeight = contentRect.size.height + self.contentEdgeInsets.top + self.contentEdgeInsets.bottom;
+
     // 水平方向
     switch (self.contentHorizontalAlignment) {
         case UIControlContentHorizontalAlignmentCenter: {// 中心对齐
@@ -307,12 +298,15 @@
     
     // 给图片高度作最大限制，超出限制对高度进行压缩，这样还可以保证titeLabel不会超出其有效区域
     CGFloat imageTitleLimitMaxH = contentRect.size.height - self.imageEdgeInsets.top - self.imageEdgeInsets.bottom;
-    if (titleSize.height + self.currentImage.size.height > imageTitleLimitMaxH) {
-        CGFloat beyondValue = titleSize.height + self.currentImage.size.height - imageTitleLimitMaxH;
-        imageSize.height = imageSize.height - beyondValue;
-        NSLog(@"imageSizeH真实高度 = %f",imageSize.height);
-
+    if (imageSize.height < imageTitleLimitMaxH) {
+        if (titleSize.height + self.currentImage.size.height > imageTitleLimitMaxH) {
+            CGFloat beyondValue = titleSize.height + self.currentImage.size.height - imageTitleLimitMaxH;
+            imageSize.height = imageSize.height - beyondValue;
+        }
+        // 之所以采用自己计算的结果，是因为当sizeToFit且titleLabel的numberOfLines > 0时，系统内部会按照2行计算
+        titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
     }
+
     // 垂直方向
     switch (self.contentVerticalAlignment) {
         case UIControlContentVerticalAlignmentCenter: // 中心对齐
@@ -346,9 +340,6 @@
     // 这个if语句的含义是：计算图片由于设置了contentEdgeInsets而被压缩的高度，设置imageEdgeInsets被压缩的高度不计算在内。这样做的目的是，当设置了contentEdgeInsets时，图片可能会被压缩，此时titleLabel的y值依赖于图片压缩后的高度，当设置了imageEdgeInsets时，图片也可能被压缩，此时titleLabel的y值依赖于图片压缩前的高度，这样以来，设置imageEdgeInsets就不会对titleLabel的y值产生影响
     if (self.currentImage.size.height + titleSize.height > contentRect.size.height) {
         imageSize.height = self.currentImage.size.height - (self.currentImage.size.height + titleSize.height - contentRect.size.height);
-        if (imageSize.height < 0) {
-            imageSize.height = 0;
-        }
     }
 
     titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
@@ -386,7 +377,7 @@
     // 垂直方向
     switch (self.contentVerticalAlignment) {
         case UIControlContentVerticalAlignmentCenter: {// 中心对齐
-            // (self.currentImage.size.height + titleSize.height)这个整体高度很重要，这里相当于按照按钮原有规则进行对齐，即按钮的对齐方式不管是设置谁的Insets，计算时都是以图片+文字这个整体作为考虑对象
+            // (imageSize.height + titleSize.height)这个整体高度很重要，这里相当于按照按钮原有规则进行对齐，即按钮的对齐方式不管是设置谁的Insets，计算时都是以图片+文字这个整体作为考虑对象
             titleOrigin.y =  (contentRect.size.height - self.titleEdgeInsets.top - self.titleEdgeInsets.bottom - (imageSize.height + titleSize.height)) / 2.0 + imageSize.height + self.contentEdgeInsets.top + self.titleEdgeInsets.top + _imageTitleSpace * 0.5;
         }
             break;
@@ -412,8 +403,6 @@
     CGPoint imageOrigin = imageRect.origin;
     CGSize imageSize = imageRect.size;
     CGSize titleSize = titleRect.size;
-    
-    titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
     
     CGFloat imageSafeWidth = contentRect.size.width - self.imageEdgeInsets.left - self.imageEdgeInsets.right;
     // 这里水平中心对齐，跟图片在右边时的中心对齐时差别在于：图片在右边时中心对齐考虑了titleLabel+imageView这个整体，而这里只单独考虑imageView
@@ -444,11 +433,15 @@
             break;
     }
     
-    // 给图片高度作最大限制，超出限制对高度进行压缩,这样还可以保证titeLabel不会超出其有效区域
+    // 给图片高度作最大限制，超出限制对高度进行压缩，这样还可以保证titeLabel不会超出其有效区域
     CGFloat imageTitleLimitMaxH = contentRect.size.height - self.imageEdgeInsets.top - self.imageEdgeInsets.bottom;
-    CGFloat beyondValue = imageSize.height + [self calculateTitleSizeForSystemTitleSize:titleSize].height - imageTitleLimitMaxH;
-    if (beyondValue > 0) {
-        imageSize.height = imageSize.height - beyondValue;
+    if (imageSize.height < imageTitleLimitMaxH) {
+        if (titleSize.height + self.currentImage.size.height > imageTitleLimitMaxH) {
+            CGFloat beyondValue = titleSize.height + self.currentImage.size.height - imageTitleLimitMaxH;
+            imageSize.height = imageSize.height - beyondValue;
+        }
+        // 之所以采用自己计算的结果，是因为当sizeToFit且titleLabel的numberOfLines > 0时，系统内部会按照2行计算
+        titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
     }
     // 垂直方向
     switch (self.contentVerticalAlignment) {
@@ -482,13 +475,10 @@
     // 这个if语句的含义是：计算图片由于设置了contentEdgeInsets而被压缩的高度，设置imageEdgeInsets被压缩的高度不计算在内。这样做的目的是，当设置了contentEdgeInsets时，图片可能会被压缩，此时titleLabel的y值依赖于图片压缩后的高度，当设置了imageEdgeInsets时，图片也可能被压缩，此时titleLabel的y值依赖于图片压缩前的高度，这样一来，设置imageEdgeInsets就不会对titleLabel的y值产生影响
     if (self.currentImage.size.height + titleSize.height > contentRect.size.height) {
         imageSize.height = self.currentImage.size.height - (self.currentImage.size.height + titleSize.height - contentRect.size.height);
-        if (imageSize.height < 0) {
-            imageSize.height = 0;
-        }
     }
-    // 自己计算titleLabel的宽度，因为当外界设置了titleEdgeInsets值时，系统计算出来的所有值都是在”左图右文“的基础上进行的，这个基础上可能会导致titleLabel的宽度被压缩，所以我们在此自己重新计算
+
     titleSize = [self calculateTitleSizeForSystemTitleSize:titleSize];
-    // titleLabel的安全宽度
+    // titleLabel的安全宽度，因为当外界设置了titleEdgeInsets值时，系统计算出来的所有值都是在”左图右文“的基础上进行的，这个基础上可能会导致titleLabel的宽度被压缩，所以我们在此自己重新计算
     CGFloat titleSafeWidth = contentRect.size.width - self.titleEdgeInsets.left - self.titleEdgeInsets.right;
     if (titleSize.width > titleSafeWidth) {
         titleSize.width = titleSafeWidth;
