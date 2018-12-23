@@ -39,7 +39,7 @@ static NSString * const setupInsetsCellID = @"setupInsetsCell";
     SPButton *button = [[SPButton alloc] initWithImagePosition:SPButtonImagePositionLeft];
     button.frame = CGRectMake((kScreenW - 200)/2.0, kNaviHeight + 20, 200, 100);
     [button setTitle:@"送你一个微笑" forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"Expression_smile"] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:@"dog"] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     button.backgroundColor = [UIColor yellowColor];
     button.titleLabel.backgroundColor = [UIColor greenColor];
