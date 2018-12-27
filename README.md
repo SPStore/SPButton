@@ -2,7 +2,7 @@
 ## 安装
 ```
 target 'MyApp' do
-  pod 'SPButton', '~> 3.0.2'
+  pod 'SPButton', '~> 3.1.0'
 end
 ```
 
