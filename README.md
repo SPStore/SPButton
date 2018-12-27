@@ -1,4 +1,8 @@
 # SPButton
+[![Pod Version](http://img.shields.io/cocoapods/v/SPButton.svg?style=flat)](http://cocoadocs.org/docsets/SPButton/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/SPPageMenu.svg?style=flat)](http://cocoadocs.org/docsets/SPButton/)
+![Language](https://img.shields.io/badge/language-Object--C-ff69b4.svg)
+
 ## 安装
 ```
 target 'MyApp' do
